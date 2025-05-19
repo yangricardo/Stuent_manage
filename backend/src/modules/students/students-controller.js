@@ -23,8 +23,8 @@ const handleGetStudentDetail = asyncHandler(async (req, res) => {
 });
 
 const handleStudentStatus = asyncHandler(async (req, res) => {
-    //write your code
-
+    const studentStatusResponse = await setStudentStatus(req.body)
+    res.json(studentStatusResponse)
 });
 
 module.exports = {
