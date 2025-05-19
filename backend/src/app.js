@@ -8,7 +8,8 @@ const { v1Routes } = require("./routes/v1");
 const { cors } = require("./config");
 const path = require("path");
 const app = express();
-
+const morgan = require("morgan");
+app.use(morgan("dev"));
 app.use(cors)
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
